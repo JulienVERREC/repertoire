@@ -1,7 +1,6 @@
 {
   "name": "repertoire",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,14 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienVERREC/repertoire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JulienVERREC/repertoire/issues"
+  },
+  "homepage": "https://github.com/JulienVERREC/repertoire#readme",
+  "description": ""
 }

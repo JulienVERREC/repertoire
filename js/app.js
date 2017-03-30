@@ -1,27 +1,34 @@
   $(document).ready(function(){
 
+    var annuaire = [];
+   
    $("#register").click(function(){
     
-    var annuaire = [];
-
-    var personne = {
-	   "prenom":"",
-	   "nom":"",
-	   "age":""
-       };
+      var personne = {
+	       "prenom":"",
+	       "nom":"",
+	       "age":""
+         };
 
     personne["prenom"] = $("#firstname").val();
     personne["nom"] = $("#name").val();
-	personne["age"] = $("#old").val();
+	  personne["age"] = $("#old").val();
 
-	annuaire.push(personne);
-	console.log(personne);
-	console.log(annuaire);
+    console.log(personne);
+    console.log(annuaire);
 
+    annuaire.push(personne);
+    
+    
+    console.log(annuaire);
+
+    $("input").val("");
     $("#infoUn").html(personne["prenom"]);
     $("#infoDeux").html(personne["nom"]);
     $("#infoTrois").html(personne["age"]);
 });
 });
+
+
 
 
