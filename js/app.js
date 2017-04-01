@@ -1,16 +1,29 @@
+        var annuaire = [];
+
+//fonction restaurer sauvegarder
+      function sauvegarder(){
+        localStorage.setItem('annuaire' , JSON.stringify(annuaire));
+      }
+
+      function restaurer(){
+        var a = localStorage.getItem('annuaire');
+
+        if ( a != null ){
+            annuaire = JSON.parse( a );
+            }
+
+        console.log( annuaire );
+        }
+      
   $(document).ready(function(){
 
-      var annuaire = [];
+        restaurer();
+
+
+
    
-      var personne = {};
+        var personne = {};
 
-        var personne_json = JSON.stringify(personne);
-        sessionStorage.setItem("objet",personne_json);
-
-        var pesonne_json = sessionStorage.getItem("objet");
-        var pesonne = JSON.parse(personne_json);
-        console.log(personne);
-        
         $("#register").click(function(){
 
             personne = {
@@ -19,30 +32,31 @@
             "age":     $("#old").val(),
             };
 
-      annuaire.push(personne);
-
+        annuaire.push(personne);
+        sauvegarder();
 
         $("#ajout").html("");
 
             for ( var i =  0 ; i < annuaire.length ; i++) {
         
-            var num = i + 1;
+        var num = i + 1;
 
         $("#ajout").append('<tr><td>' + num + '</td><td>' +  annuaire[i].prenom  +  '</td><td>'  
           + annuaire[i].nom  +  '</td><td>'  +  annuaire[i].age  +  '</td></tr>');
 
         $("input").val("");
+
       
       };
 
-//      console.log(annuaire);
-//      console.log(personne);
-  });
 
+  });
 
 
 });
 
+
+  
   
 
        
